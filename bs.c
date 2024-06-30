@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 bool check_sort(int *values, size_t size) {
-    for (int index = 0; index < size; index++) {
+    for (int index = 0; index < size - 1; index++) {
         int actual = values[index];
         int next = values[index + 1];
         if (actual > next) {
@@ -15,7 +15,7 @@ bool check_sort(int *values, size_t size) {
 
 void bubble_sort(int *values, size_t size) {
     do {
-        for (int index = 0; index < size; index ++) {
+        for (int index = 0; index < size - 1; index ++) {
             int actual = values[index];
             int next = values[index + 1];
             if (actual > next) {
